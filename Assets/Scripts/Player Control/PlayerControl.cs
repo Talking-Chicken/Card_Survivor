@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     private Card currentCard;
+    [SerializeField] private CardShadow shadow; //appears during holding state, indicates where will the holding card land
 
     //getters & setters
     public Card CurrentCard {get => currentCard; set => currentCard = value;}
+    public CardShadow Shadow {get => shadow;}
     
     private PlayerStateBase currentState;
     public PlayerStateIdle stateIdle = new PlayerStateIdle();
